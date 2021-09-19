@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
     @Throws(Exception::class)
     fun runTheSimulation(view: View?) {
         totalSumU1 =
-            simulation.startSimulation(simulation.loadU1(simulation.read_PhaseOne()))
-        totalSumU1 += simulation.startSimulation(simulation.loadU1(simulation.read_PhaseTwo()))
+            simulation.startSimulation(simulation.loadU1(simulation.readPhaseOne()))
+        totalSumU1 += simulation.startSimulation(simulation.loadU1(simulation.readPhaseTwo()))
         sumU1.text = "$totalSumU1 million $"
         totalSumU2 =
-            simulation.startSimulation(simulation.loadU2(simulation.read_PhaseOne()))
-        totalSumU2 += simulation.startSimulation(simulation.loadU2(simulation.read_PhaseTwo()))
+            simulation.startSimulation(simulation.loadU2(simulation.readPhaseOne()))
+        totalSumU2 += simulation.startSimulation(simulation.loadU2(simulation.readPhaseTwo()))
         sumU2.text = "$totalSumU2 million $"
     }
 }

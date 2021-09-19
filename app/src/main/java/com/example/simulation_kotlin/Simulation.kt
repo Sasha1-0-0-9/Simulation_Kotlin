@@ -8,7 +8,7 @@ import java.util.*
 class Simulation(var context: Context) {
 
     @Throws(IOException::class)
-    fun read_PhaseOne(): ArrayList<Item> {
+    fun readPhaseOne(): ArrayList<Item> {
         val assetManager: AssetManager = context.getAssets()
         val phase_one = ArrayList<Item>()
         val scanner = Scanner(assetManager.open("Phase1"))
@@ -21,7 +21,7 @@ class Simulation(var context: Context) {
     }
 
     @Throws(IOException::class)
-    fun read_PhaseTwo(): ArrayList<Item> {
+    fun readPhaseTwo(): ArrayList<Item> {
         val assetManager = context.assets
         val phase_two = ArrayList<Item>()
         val scanner = Scanner(assetManager.open("Phase2"))
