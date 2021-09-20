@@ -10,8 +10,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var sumU1: TextView
     lateinit var sumU2: TextView
     var simulation = Simulation(this)
-    //var totalSumU1 = 0
-    //var totalSumU2 = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
