@@ -10,27 +10,27 @@ class Simulation(var context: Context) {
     @Throws(IOException::class)
     fun readPhaseOne(): ArrayList<Item> {
         val assetManager: AssetManager = context.getAssets()
-        val phase_one = ArrayList<Item>()
+        val phaseOne = ArrayList<Item>()
         val scanner = Scanner(assetManager.open("Phase1"))
         while (scanner.hasNextLine()) {
             val lines = scanner.nextLine().split("=").toTypedArray()
             val item : Item = Item(lines[0], lines[lines.size - 1].toInt())
-            phase_one.add(item)
+            phaseOne.add(item)
         }
-        return phase_one
+        return phaseOne
     }
 
     @Throws(IOException::class)
     fun readPhaseTwo(): ArrayList<Item> {
         val assetManager = context.assets
-        val phase_two = ArrayList<Item>()
+        val phaseTwo = ArrayList<Item>()
         val scanner = Scanner(assetManager.open("Phase2"))
         while (scanner.hasNextLine()) {
             val lines = scanner.nextLine().split("=").toTypedArray()
             val item : Item = Item(lines[0], lines[lines.size - 1].toInt())
-            phase_two.add(item)
+            phaseTwo.add(item)
         }
-        return phase_two
+        return phaseTwo
     }
 
     fun loadU1(arrayList: ArrayList<Item>): ArrayList<Rocket> {
